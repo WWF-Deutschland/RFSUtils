@@ -78,6 +78,16 @@ append_num_zonalStats <- function(input, raster,
   ## Give a generic error for all other objects
   check_arg_type(input, c("sf", "sfc"), "input")
 
+  ## Custom fn that we've already created to augment existing standard fn
+  custom_fn <- list(
+    nodata = function (df, ...)
+    {
+      all(is.na(df$value))
+    }, propNA = function (df, ...)
+    {
+      sum(is.na(df$value))/length(df$value)
+    })
+
   ## If funs is a list (i.e. it contains custom funs)
   ## Make sure the list items have names
   ## We need these names for indexing
@@ -93,10 +103,11 @@ append_num_zonalStats <- function(input, raster,
 
   ## Replace fn names with explicit bespoke functions where needed
   ## Identify any functions that need to be replaced
-  fns_replace_index <- which(funs %in% names(RFSTools::fns_vct))
+  ## TODO: This should be stored internally
+  fns_replace_index <- which(funs %in% names(custom_fn))
   ## If there are any, replace these with stored functions
   if (length(fns_replace_index) > 0){
-    funs <- c(funs[-fns_replace_index], RFSTools::fns_vct[names(funs[fns_replace_index])])
+    funs <- c(funs[-fns_replace_index], custom_fn[names(funs[fns_replace_index])])
   }
 
   ## Loop through all functions provided
@@ -123,7 +134,7 @@ append_num_zonalStats <- function(input, raster,
     st_geometry(output) <- input
   } else if(inherits(input, "sf")){
     output <- dplyr::bind_cols(input, bind_cols(output_list),
-                        .name_repair = "unique")
+                               .name_repair = "unique")
   }
 
   return(output)
