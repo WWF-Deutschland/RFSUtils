@@ -10,6 +10,9 @@ Description: Range of R utility functions used to complete common tasks for the 
 Depends:
   R (>= 4.3.0)
 Imports:
+  dplyr,
+  sf,
+  exactextractr
 License: GPL-2
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
