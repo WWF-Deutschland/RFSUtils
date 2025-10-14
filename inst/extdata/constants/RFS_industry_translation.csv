@@ -1,0 +1,27 @@
+ID,Group,Group_code,Industry,Industry_code,Industry_trunc,Only.Terrestrial
+1,Agriculture,AG,Agriculture (animal products),AGAN,Agriculture (animal),TRUE
+2,Agriculture,AG,Agriculture (plant products),AGPL,Agriculture (plant),FALSE
+3,Manufacturing,MA,Appliances & General Goods Manufacturing,MAGE,General manufacturing,TRUE
+4,Manufacturing,MA,"Automotive, Electrical Equipment & Machinery Production",MAAU,Automotive manufacturing,TRUE
+5,Production,PR,Chemicals & Other Materials Production,PRCH,Chemicals,TRUE
+6,Construction,CT,Construction Materials,CTMT,Construction materials,TRUE
+7,Energy,EL,"Electric Energy Production - Geothermal or Combustion (Biomass, Coal, Gas, Nuclear, Oil)",ELCO,Energy (geothermal & combustion),TRUE
+8,Energy,EL,Electric Energy Production - Hydropower,ELHY,Energy (hydro),FALSE
+9,Energy,EL,"Electric Energy Production - Solar, Wind",ELRE,Energy (wind/solar),FALSE
+10,Manufacturing,MA,Electronics & Semiconductor Manufacturing,MAEL,Electronics manufacturing,TRUE
+11,Agriculture,AG,Fishing and aquaculture,AGAQ,Fishing/Aquaculture,FALSE
+12,Production,PR,Food & Beverage Production,PRFO,Food & beverage,TRUE
+13,Retail,RT,Food Retailing,RTFO,Food retailing,TRUE
+14,Retail,RT,General or Speciality Retailing,RTGE,General/Speciality Retailing,TRUE
+15,Healthcare,HC,"Health Care, Pharmaceuticals and Biotechnology",HCGE,Health Care,TRUE
+16,Real Estate,RE,Hospitality Services,REHO,Hospitality,FALSE
+17,Construction,CT,Land development & Construction,CTDV,Land development,FALSE
+18,Commodities,CM,Metals & Mining,CMML,Metals & mining,FALSE
+19,Real Estate,RE,"Offices & professional services (e.g., Consulting, Software, Real Estate, Financial Institutions)",REOF,Office/Professional services,TRUE
+20,Commodities,CM,"Oil, Gas & Consumable Fuels",CMOG,Oil & gas,FALSE
+21,Other,OT,Other,OTXX,Other,FALSE
+22,Commodities,CM,Paper & Forest Product Production,CMFR,Paper/Forest products,TRUE
+23,Utilities,UT,Telecommunication services (including wireless),UTTC,Telecommunication,FALSE
+24,Production,PR,"Textiles, Apparel & Luxury Good Production",PRTX,Textiles,TRUE
+25,Utilities,UT,Transportation Services,UTTR,Transportation,FALSE
+26,Utilities,UT,Water utilities / Water Service Providers,UTWR,Water utilities,TRUE
