@@ -6,7 +6,7 @@
 #'
 #' @param risk_score An ordered factor or numeric vector.
 #' For an ordered factor, should be an object of class ordered factor that has
-#' levels specified in the object [risk_scores]. For numeric vector, expects
+#' levels specified in the object risk_scores. For numeric vector, expects
 #' values between 0 and 5.
 #' @param return_fct Logical. Should data be returned as a factor with the same
 #' levels as the input or as a numeric (default).
