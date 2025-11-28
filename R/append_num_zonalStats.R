@@ -85,7 +85,7 @@ append_num_zonalStats <- function(input, raster,
       all(is.na(df$value))
     }, propNA = function (df, ...)
     {
-      sum(is.na(df$value))/length(df$value)
+      sum(df$coverage_fraction[is.na(df$value)])/sum(df$coverage_fraction)
     })
 
   ## If funs is a list (i.e. it contains custom funs)
