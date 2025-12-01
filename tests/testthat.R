@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(RFSTools)
+library(RFSUtils)
 
-test_check("RFSTools")
+test_check("RFSUtils")
